@@ -10,6 +10,18 @@ namespace Kalkulator
 	{
 		static void Main(string[] args)
 		{
+			int x = 5;
+			if (x == 8)
+			{
+				Console.WriteLine("X je 8");
+			} else
+			{
+				Console.WriteLine("X nije 8");
+			}
+
+
+
+
 			Console.WriteLine("Unesite broj: ");
 
 
@@ -28,7 +40,25 @@ namespace Kalkulator
 			//postavi vrednost
 			int broj2 = int.Parse(Console.ReadLine());
 
-			Console.WriteLine("Zbir je " + (broj1 + broj2));
+			Console.WriteLine("Unesite + za zbir, - za razliu, * za mnozenje: ");
+			string op = Console.ReadLine();
+
+
+
+			if (op == "+")
+			{
+				Console.WriteLine("Zbir je " + (broj1 + broj2));
+			}
+			else if (op == "*")
+			{
+				Console.WriteLine("Produkt je " + (broj1 * broj2));
+			} else if (op == "-")
+			{
+				Console.WriteLine("Razlika je " + (broj1 - broj2));
+			} else
+			{
+				Console.WriteLine("Operacija nije podrzana :(");
+			}
 
 
 			//Samo da se program ne zatvori
