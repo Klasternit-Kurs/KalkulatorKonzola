@@ -24,28 +24,46 @@ namespace Kalkulator
 
 			Console.WriteLine("Unesite broj: ");
 
-
 			//int broj1 =  int.Parse(Console.ReadLine());
 			//Ova linija je u potpunosti jednaka 
 			//sa ove 4 ispod
 			string unos;
 			unos = Console.ReadLine();
-			int broj1;
-			broj1 = int.Parse(unos);
+			double broj1;
+			broj1 = double.Parse(unos);
 
 			//broj1 = Console.ReadLine();
 
 			Console.Write("Unesite drugi broj: ");
 			//Kratka forma, i definise promenljivu i
 			//postavi vrednost
-			int broj2 = int.Parse(Console.ReadLine());
+			double broj2 = double.Parse(Console.ReadLine());
 
-			Console.WriteLine("Unesite + za zbir, - za razliu, * za mnozenje: ");
+			Console.WriteLine("Unesite + za zbir, - za razliku, * za mnozenje ili" +
+				"/ za deljenje: ");
 			string op = Console.ReadLine();
 
+			switch(op)
+			{
+				case "+":
+					Console.WriteLine("Zbir je " + (broj1 + broj2));
+					break;
+				case "-":
+					Console.WriteLine("Razlika je " + (broj1 - broj2));
+					break;
+				case "*":
+					Console.WriteLine("Produkt je " + (broj1 * broj2));
+					break;
+				case "/":
+					Console.WriteLine("Rezultat je " + (broj1 / broj2));
+					break;
+				default:
+					Console.WriteLine("Nije ni jedno niti drugo :(");
+					break;
+			}
 
-
-			if (op == "+")
+			
+			/*if (op == "+")
 			{
 				Console.WriteLine("Zbir je " + (broj1 + broj2));
 			}
@@ -55,10 +73,13 @@ namespace Kalkulator
 			} else if (op == "-")
 			{
 				Console.WriteLine("Razlika je " + (broj1 - broj2));
+			} else if (op == "/")
+			{
+				Console.WriteLine("Rezultat je " + (broj1 / (double)broj2));
 			} else
 			{
 				Console.WriteLine("Operacija nije podrzana :(");
-			}
+			}*/
 
 
 			//Samo da se program ne zatvori
