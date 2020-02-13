@@ -19,9 +19,6 @@ namespace Kalkulator
 				Console.WriteLine("X nije 8");
 			}
 
-
-
-
 			Console.WriteLine("Unesite broj: ");
 
 			//int broj1 =  int.Parse(Console.ReadLine());
@@ -56,6 +53,25 @@ namespace Kalkulator
 					break;
 				case "/":
 					Console.WriteLine("Rezultat je " + (broj1 / broj2));
+					break;
+				case "%":
+					Console.WriteLine("Rezultat je " + (broj1 % broj2));
+					break;
+				case "^":
+					double rez = broj1;
+					if (broj2 == 0)
+					{
+						Console.WriteLine("Rezultat je " + 1);
+					}
+					else
+					{
+						while (broj2 > 1)
+						{
+							broj2--;
+							rez *= broj1;
+						}
+						Console.WriteLine("Rezultat je " + rez);
+					}
 					break;
 				default:
 					Console.WriteLine("Nije ni jedno niti drugo :(");
